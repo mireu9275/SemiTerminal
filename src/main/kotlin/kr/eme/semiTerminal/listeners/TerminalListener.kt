@@ -1,5 +1,6 @@
 package kr.eme.semiTerminal.listeners
 
+import kr.eme.semiTerminal.managers.PacketManager.mutePlayer
 import org.bukkit.entity.ArmorStand
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
@@ -24,6 +25,7 @@ object TerminalListener : Listener {
         val damager = event.damager
         if (entity is ArmorStand && damager is Player) {
             event.isCancelled = true
+            mutePlayer(damager)
             damager.sendMessage("Left Click")
         }
     }
