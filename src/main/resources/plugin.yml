@@ -5,7 +5,7 @@ api-version: 1.20
 depend:
   - ProtocolLib
 commands:
-  shop:
+  terminal:
     description: 터미널 상점을 여는 명령어
     aliases: 상점
-    usage: /shop
+    usage: /terminal

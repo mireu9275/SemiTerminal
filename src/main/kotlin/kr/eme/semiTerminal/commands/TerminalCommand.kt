@@ -22,7 +22,7 @@ object TerminalCommand : CommandExecutor {
         return true
     }
     fun usage(player: Player) {
-        player.sendMessage("usage: /shop [key]")
+        player.sendMessage("usage: /terminal [key]")
     }
 
     private fun createArmorStandAndTextDisplay(player: Player, key: Component) {
