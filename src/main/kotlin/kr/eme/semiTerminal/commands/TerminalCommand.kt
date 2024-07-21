@@ -42,7 +42,7 @@ object TerminalCommand : CommandExecutor {
         textDisplay.apply {
             isCustomNameVisible = false // 이름 비활성화
             customName(key)
-            text(Component.text("상점을 이용하시겠습니까?\n[네][아니요]"))
+            text(Component.text("상점을 이용하시겠습니까?\n§a[네]§f[아니요]"))
             billboard = (Display.Billboard.CENTER) //모든 방향에서 보임
         }
         registerEntityPair(key, armorStand, textDisplay)
