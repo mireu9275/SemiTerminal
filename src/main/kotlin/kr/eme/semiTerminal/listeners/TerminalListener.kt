@@ -33,7 +33,7 @@ object TerminalListener : Listener {
                 Scene.MAIN -> {
                     when (selectedOption) {
                         0 -> { // YES 클릭
-                            NextDisplay(entityPair, 1)
+                            nextDisplay(entityPair, 1)
                             entityPair.textDisplay.text(Component.text("선택해주세요.\n§a[작물]§f[기타]"))
                         }
                         1 -> { // NO 클릭
@@ -44,7 +44,7 @@ object TerminalListener : Listener {
                 Scene.SHOP_SELECT -> {
                     when (selectedOption) {
                         0 -> { // 작물 클릭
-                            NextDisplay(entityPair, 2)
+                            nextDisplay(entityPair, 2)
                             entityPair.textDisplay.text(Component.text("구매할 작물을 선택해주세요.\n§a[봄]§f[여름][가을]"))
                         }
                     }
@@ -83,7 +83,7 @@ object TerminalListener : Listener {
      *
      * @param entityPair
      */
-    private fun NextDisplay(entityPair: EntityPair, sceneIndex: Int) {
+    private fun nextDisplay(entityPair: EntityPair, sceneIndex: Int) {
         entityPair.sceneIndex = sceneIndex
         entityPair.selectedOption = 0
     }
@@ -94,7 +94,7 @@ object TerminalListener : Listener {
      *
      * @param entityPair
      */
-    private fun PreviousDisplay(entityPair: EntityPair, sceneIndex: Int) {
+    private fun previousDisplay(entityPair: EntityPair, sceneIndex: Int) {
         entityPair.sceneIndex = sceneIndex
         entityPair.selectedOption = 0
     }
